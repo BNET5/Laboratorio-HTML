@@ -1,8 +1,100 @@
-<h1>Mi nombre es VICTOR HUGO CRUZ AMARU</h1>
-<img src="Perfil1.jpg" width ="200 px" height="200 px"<br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Victor Hugo Cruz Amaru</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            margin: 20px;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+        }
+        .button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .login-container {
+            display: none;
+            text-align: center;
+            margin: 20px;
+        }
+        .login-container input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 80%;
+        }
+        .login-container .button {
+            background-color: #008CBA;
+        }
+        .login-container .button:hover {
+            background-color: #007bb5;
+        }
+    </style>
+</head>
+<body>
 
-<p>Tengo 20 años y estoy cursando la carrera de ingenieria en sistemas, estoy en mi tercer año.<br>
-    Me gustan las materias de programacion, hardware y arquitectura de computadoras y base de datos son las que mas me llaman la atencion.tambien me gustan los deportes
-</p>
+    <div class="container">
+        <h1>Mi nombre es VICTOR HUGO CRUZ AMARU</h1>
+        <img src="Perfil1.jpg" alt="Perfil de Victor Hugo Cruz Amaru" class="profile-img">
+        <p>Tengo 20 años y estoy cursando la carrera de ingeniería en sistemas, estoy en mi tercer año.<br>
+           Me gustan las materias de programación, hardware y arquitectura de computadoras y base de datos son las que más me llaman la atención. También me gustan los deportes.
+        </p>
+        
+        <h2>Experiencias</h2>
+        <ul>
+            <li>Desarrollé una aplicación móvil para la gestión de tareas.</li>
+            <li>Participé en un proyecto de investigación sobre inteligencia artificial.</li>
+            <li>Realicé prácticas profesionales en una empresa de tecnología, donde trabajé con bases de datos y sistemas embebidos.</li>
+        </ul>
+        
+        <button class="button" onclick="showLogin()">Regístrate a mi blog</button>
+    </div>
 
+    <div class="login-container" id="loginContainer">
+        <h2>Inicio de sesión</h2>
+        <input type="text" placeholder="Usuario" id="username">
+        <input type="password" placeholder="Contraseña" id="password">
+        <p><a href="#">¿Olvidaste tu contraseña?</a></p>
+        <button class="button" onclick="login()">Iniciar sesión</button>
+        <button class="button" onclick="goBack()">Atrás</button>
+        <button class="button" onclick="goHome()">Inicio</button>
+    </div>
 
+    <script>
+        function showLogin() {
+            document.querySelector('.container').style.display = 'none';
+            document.getElementById('loginContainer').style.display = 'block';
+        }
+        
+        function login() {
+            alert('Iniciar sesión');
+        }
+        
+        function goBack() {
+            document.querySelector('.container').style.display = 'block';
+            document.getElementById('loginContainer').style.display = 'none';
+        }
+        
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+
+</body>
+</html>
